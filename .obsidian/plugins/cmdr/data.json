@@ -1,0 +1,31 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": true,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "obsidian-local-images:download-images",
+      "icon": "arrow-down-circle",
+      "name": "Local images: Download images locally",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:split-vertical",
+      "icon": "lucide-separator-vertical",
+      "name": "Split right",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": "8"
+}

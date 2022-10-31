@@ -1,0 +1,141 @@
+{
+  "main": {
+    "id": "9c0673738c850608",
+    "type": "split",
+    "children": [
+      {
+        "id": "98ca8dd5ff7aaff0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5e78e0e54922c51",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MapReduce. Simplified Data Processing on Large Clusters.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3b775fffb74a5492",
+    "type": "split",
+    "children": [
+      {
+        "id": "9707cca7e7a09372",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b8500b3c3f49165c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fbf80df1a1af1554",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5a3a9d296acc83d9",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "33c59cd299247589",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d85405dd56b0604",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7ba41949342a008c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "MapReduce. Simplified Data Processing on Large Clusters.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fdfee5e730ed2f60",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "MapReduce. Simplified Data Processing on Large Clusters.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "92757de0f24833ab",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8648ac6652837dbb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "MapReduce. Simplified Data Processing on Large Clusters.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "b5e78e0e54922c51",
+  "lastOpenFiles": []
+}

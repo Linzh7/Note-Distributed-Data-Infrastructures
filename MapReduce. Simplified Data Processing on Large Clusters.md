@@ -1,0 +1,5 @@
+[Link](https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters)
+
+In recent years, the volume of data increased rapidly. One of the results was the process of data became difficult. Specifically, we need computers to work as a cluster to deal with the data in order to complete tasks in time. The reason why this technique is appeared in Google is that only those companies need to finish tasks in a short time, in other words, they are sensitive with delay. As a result, to solve this problem, Google proposed a method named MapReduce, which enables to divide a huge task into many subtasks, in order to distribute those subtasks to work nodes. It is worth to mention that a high edge server is rare and expensive, whereas the common servers only have limited computing power to handle simple tasks. 
+
+As the name sho
