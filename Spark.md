@@ -3,7 +3,7 @@
 
 To address the performance problem in [[MapReduce]] and [[Dryad]] caused by disk operation and the lack of fast data sharing abstraction, an in-memory compute method was proposed named *resilient distributed datasets* (RDDs). 
 
-RDD is 
+RDDs ensure the consistency by the read-only attributes, which means a RDD can only be created from data or another RDD. Moreover, RDD also *lazy compute*, i.e. the content will be computed only when they will be used. 
 
 The previous framework transfer data or logs in clusters to ensure that fault tolerance. However, due to the limited of bandwidth and the cost of storage, all the methods are not efficient enough to make high-speed computing possible. Spark prefers to use log to recover the current dataset instead of transfer the whole dataset every operation, which reduce the volume of data need to transfer significantly. Besides, if some RDDs are lost or damaged, computing nodes are also able to reproduce RDDs they should process on.
 
