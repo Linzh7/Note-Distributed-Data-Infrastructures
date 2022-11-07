@@ -4,14 +4,14 @@
 
 To address the performance problem in [[MapReduce]] and [[Dryad]] caused by disk operation and the lack of distributed memory abstraction, an in-memory computing method was proposed named *Resilient Distributed Datasets* (RDDs). 
 
-RDDs ensure the consistency by the read-only attributes, which means a RDD can only be created from data or another RDD. Moreover, RDD also can *lazy compute*, i.e. the content will be computed only when they will be used (until `.count()`, `collect()`, etc. were called), which enable pipeline transformations. All of those features <>
+RDDs ensure the consistency by the read-only attributes, which means a RDD can only be created from data or another RDD. This feature also allows running backup copies to accelerates the entire task without conflict. Moreover, RDD also can *lazy compute*, i.e. the content will be computed only when they will be used (until `.count()`, `collect()`, etc. were called), which enable pipeline transformations. All of those features <>
 
-The previous framework transfer data or logs in clusters to ensure that fault tolerance. However, due to the limited of bandwidth and the cost of storage, all the methods are not efficient enough to make high-speed computing possible. Spark prefers to use log to recover the current dataset instead of transfer the whole dataset every operation, which reduce the volume of data need to transfer significantly. Besides, if some RDDs are lost or damaged, computing nodes are also able to reproduce RDDs they should process on.
-
-
+(?)The previous framework transfer data or logs in clusters to ensure that fault tolerance. However, due to the limited of bandwidth and the cost of storage, all the methods are not efficient enough to make high-speed computing possible. Spark prefers to use log to recover the current dataset instead of transfer the whole dataset every operation, which reduce the overhead of checkpoint and also provides effective fault tolerance. Besides, if some RDDs are lost or damaged, computing nodes are also able to reproduce RDDs they should process on.
 
 To make use of RDDs, Spark was implemented and deployed in many areas. After deploying Spark at Google, some strange errors occur frequently. After the investigation, they found those errors are related to cheap memories which do not have erasure coding(?). However, the performance of the cluster is not decrease significantly. The reason is <>. This issue indicates that the <>
 
-Compare with the previous framework, the biggest advantage is the speed. Spark is faster than Hadoop an order of magnitude. Besides, RDD also have good operability and performance. Another advantage that cannot be ignored is the latency. Though, Spark cannot process data in near real-time like stream processing, e.g. Apache Storm, but at that time, Spark undoubtedly is an innovation. We also should emphasize that Spark is still widely used nowadays, because Spark provides the interactive data exploration.
+Compare with the previous framework, the biggest advantage is the speed in gend. Besides, RDD also have good operability and performance. Another advantage that cannot be ignored is the latency. Though, Spark cannot process data in near real-time like stream processing, e.g. Apache Storm, but at that time, Spark undoubtedly is an innovation. We also should emphasize that Spark is still widely used nowadays, because Spark provides the interactive data exploration.
+
+In the same way, RDD has 
 
 Conversely, Spark still has some disadvantages, which might be a trade-off for generalization. Due to the usage of *Scala tuples*, Spark cannot ensure the type safety in compiling. The coarse grained transformations also limit the applications. <>
