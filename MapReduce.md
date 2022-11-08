@@ -1,4 +1,4 @@
-3[MapReduce: Simplified Data Processing on Large Clusters](https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters)
+[MapReduce: Simplified Data Processing on Large Clusters](https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters)
 
 In the past twenty years, the volume of data on the Internet has increased rapidly. One of the results was the process of data became difficult even with the fast development of computing power. Specifically, companies which need to process data want to figure out a way to compute those data with cheap servers clusters, which include a huge number of computers with low computing power and failure is common. Moreover, service providers also need to provide users with results in a short time, in other words, those companies are sensitive to delay. To address such needs, companies focused on developing distributed computing methods. That might explain why this technique appears in Google, the largest internet service provider at that time.
 

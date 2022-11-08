@@ -1,1 +1,1 @@
-Hadoop is a distributed framework for
+Hadoop is a distributed framework developed by Apache. There are a number of components are programmed for Hadoop and the core of any system is the storage, the Hadoop Distributed File System (HDFS). 
