@@ -4,4 +4,6 @@ HDFS and other distributed file system use same strategies to organize storage s
 
 The biggest difference between HDFS and other systems is that HDFS copies the same data to several DataNodes instead of protect data with RAID. That is a tread-off between data availability and available storage space. This strategy enables user access data from the closest DataNode without other transmisstion, which means it saves lots of bandwidth, the most important resources in the data warehouse. HDFS stores data in three different DataNodes by default. It is also worth to mention that the choice of three DataNodes. The first DataNodes and the second DataNodes is located at the same rack, while the third DataNodes should be located at a different rack. This strategy named *Rack awareness policies* and it is aimed to improve the write performance and save bandwidth while not harm to fault-tolerance. 
 
-Another important policie is the communication between NameNodes and DataNodes. Beside the regular storage report from DataNodes, there are heartbeats which make sure that NameNodes have a correct overview of those DataNodes.
+![[Pasted image 20221108175156.png]]![]()
+
+Another important policie is the communication between NameNodes and DataNodes. Beside the regular storage report from DataNodes, they also use heartbeats to make sure that DataNodes are still accessible. Moreover, NameNodes will not communicate to DataNodes dirctly, instead, NameNodes send information by replying heartbeats.
