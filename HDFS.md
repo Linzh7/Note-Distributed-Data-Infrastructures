@@ -6,9 +6,9 @@ The biggest difference between HDFS and other systems is that HDFS copies the sa
 
 ![[Pasted image 20221108175156.png]]
 
-Another important policy is the communication between NameNodes and DataNodes. Aside from the regular storage report from DataNodes, they also use heartbeats to make sure that DataNodes are still accessible. Moreover, NameNodes will not communicate directly with DataNodes, instead, NameNodes send information by replying heartbeats.
+%%Another important policy is the communication between NameNodes and DataNodes. Aside from the regular storage report from DataNodes, they also use heartbeats to make sure that DataNodes are still accessible. Moreover, NameNodes will not communicate directly with DataNodes, instead, NameNodes send information by replying heartbeats.%%
 
-According to Brewer’s CAP theorem, the I/O operation is usually the trickiest part in distributed systems, as those systems should always maintain partition tolerance. The result of the tread-off is that HDFS gives up a certain level of availability because the authors acknowledge that we cannot be certain of the time to process an operation. Conversely, we can see that did well in consistency and partition tolerance by lease and verifying data with namenode.
+According to Brewer’s CAP theorem, the I/O operation is usually the trickiest part in distributed systems, as those systems should always maintain partition tolerance. The result of the tread-off is that HDFS gives up a certain level of availability because the authors acknowledge that programmer cannot be certain of the time to process an operation. Conversely, we can see that did well in consistency and partition tolerance by lease and verifying data with NameNodes. From this point, HDFS can handle 
 
 
 
