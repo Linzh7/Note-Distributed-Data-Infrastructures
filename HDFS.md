@@ -1,3 +1,5 @@
+[The Hadoop Distributed File System](https://ieeexplore.ieee.org/abstract/document/5496972)
+
 Hadoop is a distributed framework developed by Apache, and the core of Hadoop is the storage, namely, the Hadoop Distributed File System (HDFS).
 
 HDFS and other distributed file systems use the same strategies to organize storage space. They mark the manager computers as *NameNode* and the storage computers as *DataNode*. The metadata stored at NameNode are the records of permission, date, namespace, etc., which are maintained in memory to increase the access speed. Also, these metadata have backups and logs to improve fault tolerance. Additionally, NameNodes could also play another role in HDFS: *CheckpointNode* or *BackupNode*. CheckpointNode usually downloads the recent checkpoint and logs, then combines them to get a new checkpoint and returns it to NameNode. BackupNode is more like a shadow of NameNode, it will both create checkpoints and maintain a real-time image.
