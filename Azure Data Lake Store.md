@@ -4,7 +4,7 @@ Due to the development of IoT, people are eager to explore hundreds petabytes da
 
 ## put it into context with the rest of the systems we have seen
 
-The previous data process systems have some disadvantages which cannot 
+The previous data process systems have some disadvantages and thus can not provide an efficient analyze system. Spark only offers coarse-grained data, which means nodes will spend some time to searching the data we need. Another example is that MapReduce uses disks to storage data, and it also takes time to read the data from the disk to the memory
 
 ## system design
 
