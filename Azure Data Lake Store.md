@@ -2,17 +2,17 @@
 
 Due to the development of IoT, people are eager to explore hundreds petabytes data in an interactive way with a low price. To achieve this goal, Microsoft has to develop a system that is both efficient and reliable, the ADLS.
 
+## put it into context with the rest of the systems we have seen
+
+The previous data process systems have some disadvantages which cannot 
 
 ## system design
 
-on [[Cosmos]] 
+To  on [[Cosmos]] 
 
 Because ADLS is a PaaS, the access permission to data is another important thing. 
 
 
-## put it into context with the rest of the systems we have seen
-
-MapReduce and Spark 
 
 
 ## discuss the respective pros and cons of them
