@@ -1,19 +1,13 @@
 [Azure Data Lake Store: A Hyperscale Distributed File Service for Big Data Analytics](https://dl.acm.org/doi/10.1145/3035918.3056100)
 
-Due to the development of IoT, people are eager to explore hundreds petabytes data in an interactive way with a low price. To achieve this goal, Microsoft has to develop a not only efficient also reliable system to enable Cosmos and other large-scale data analysis, the ADLS.
+Due to the rapid development of the Internet of Things, people are eager to explore hundreds of petabytes data in an interactive way at a low price. To achieve this goal, Microsoft has to develop a not only efficient also reliable system to enable Cosmos and other large-scale data analysis, named Azure Data Lake Store (ADLS).
 
-## put it into context with the rest of the systems we have seen
+The key concept of ADLS is tiered storage, which includes local tiers and remote tiers. Local tiers could provide quick access, while remote tiers support different storage systems and provide abstracts for developers to support their development environments. Local tiers are located on the computing nodes, which enable computing without downloading. That accelerates the processing of local data. Moreover, due to the large number of IO operations, we need to ensure that the remote layer has sufficient capacity to handle them.
 
-The previous data process systems have some disadvantages and thus can not provide an efficient analyze system. Spark only offers coarse-grained data, which means nodes will spend some time to searching the data we need. Another example is that MapReduce uses disks to storage data, and it also takes time to read the data from the disk to computing. Also, as we mentioned above, we also should control the permission to data, because ADLS is an open business services.
+Since developers want data that is fine-grained, a data block in ADLS is only 4 megabytes. As we know, handling multiple partitions of files is a challenge. To achieve consistency, ADLS proposed states named *sealed* and *unsealed*. If one partition can connect to the next partition, it will be labeled as *sealed*. For the last partition, if the whole file will not be changed anymore, then the last partition will be marked as *sealed*. Moreover, UIDs are used to mark any partition, and ADLS maintains the list of UIDs to track any file. 
 
-## system design
+To reduce the workload of developers, ADLS uses RSL-HK rings to facilitate status management and make other parts transparent to developers. In addition, RSL-HK rings also provide good performance and can maintain such performance when the CPU is not saturated, even when the task is heavy. As a business service, ADLS also provides key-based multi-authentication and encryption services to ensure the security of data and effective control of access rights. RSL-HK rings also greatly enhance the scalability of distributed storage systems.
 
-The key concept of ADLS is tiered storage, includes local tiers and remote tiers. Local tiers could provide a quick access, while remote tiers support different storage systems, and provides abstracts for developers to support their tiers. Local tiers are located on the computing nodes, which enable computing without downloading. That accelerates the processing of local data. Moreover, due to the large number of IO operations, remote tiers should be capable enough to handle them.
+The previous data processing systems have some disadvantages and thus cannot provide an efficient analysis system. Spark only offers coarse-grained data, which means nodes will spend some time searching for the data they need. Another example is that MapReduce uses disks to store data, and it also takes time to read the data from the disk to compute. Also, as we mentioned above, we should control the permissions to data, because ADLS is an open business service. The biggest breakthrough of ADLS compared to Hadoop is the number of nodes that can be managed by the cluster. At that time, the biggest Hadoop cluster can manage 5k nodes. However, ADLS can provide at least one more order of magnitude of node management capability. In HDFS, there is only one NameNode, so it is difficult to scale HDFS to a large cluster. In ADLS, RSL-HK rings enable high performance and high scalability at the same time.
 
-Since developers want data are fine-grained, a data block in ADLS is only 4 megabytes. As we know, handling multiple partitions of files is a challenge. To achieve the consistency, ADLS proposed states named *sealed* and *unsealed*. If one partition can connect to the next partition, it will be labeled as *sealed*. For the last partition, if the whole file will not be changed anymore, then the last partition will be marked as *sealed*. Moreover, UIDs are used to mark any partition, and ADLS maintains the list of UIDs to track any file. 
-
-
-Because ADLS is a PaaS, the access permission to data is another important thing. 
-
-
-## discuss the respective pros and cons of them
+We have to say, those advantages make ADLS a very competitive business service.
