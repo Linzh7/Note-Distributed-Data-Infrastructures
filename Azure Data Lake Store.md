@@ -8,7 +8,7 @@ The previous data process systems have some disadvantages and thus can not provi
 
 ## system design
 
-The key concept of ADLS is tiered storage, includes local tiers and remote tiers. Local tiers could provide a quick access, while remote tiers support different storage systems, and provides
+The key concept of ADLS is tiered storage, includes local tiers and remote tiers. Local tiers could provide a quick access, while remote tiers support different storage systems, and provides abstracts for futher use.
 
 
 
