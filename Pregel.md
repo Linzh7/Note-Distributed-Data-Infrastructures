@@ -4,7 +4,9 @@ Graph plays an important role in science experiments, engineering computing and 
 
 system design
 
-To make it 
+To deploy graph computing on distributed system, the first problem should be solved is to propose a method could compuing as a chain instead of a network. This concept also appeared in MapReduce, named narrow dependency. In this case, Pregel use time series to record information, named *supersteps*. In each superstep, vertexes run a user defined function whose parameters are messages sent from other vertexes at the last superstep and send messages to other vertexes. This is an intuitive solution, which is similar with MapReduce. Both of them are focus on the local tasks and ensure this distributed system are efficient.
+
+
 
 
 
