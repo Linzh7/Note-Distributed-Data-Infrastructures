@@ -1,0 +1,5 @@
+[From "Think Like a Vertex" to "Think Like a Graph"](http://www.vldb.org/pvldb/vol7/p193-tian.pdf)
+
+[[Pregel]] as a distributed system, aims to process graph data. However, Pregel and its open source implements divide the whole graph into lots of partitions, which consider the vertexes as the keypoint of calculation. However, this method prevents future optimization algorithms from being applied to graphs. 
+
+Specifically, [[Pregel]] uses messages to update information between vertexes, which results the excessive amount of traffic. Moreover, GraphLab is struggling with maintaining the consistency, and the price is too much scheduling work. Giraph++ opened the structure of partitions to users, which can reduce the overhead by intra-partition communication. As a result, Giraph++ has a better performance.
