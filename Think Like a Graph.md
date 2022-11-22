@@ -1,0 +1,3 @@
+[From "Think Like a Vertex" to "Think Like a Graph"](http://www.vldb.org/pvldb/vol7/p193-tian.pdf)
+
+[[Pregel]] as a distributed system, aims to process graph data. However, Pregel and its open source implements divide the whole graph into lots of partitions, which consider the vertexes as the keypoint of calculation. However, this method prevents future optimization algorithms from being applied to graphs. 
