@@ -2,15 +2,8 @@ The engineering side of machine learning used to write custom codes to achieve g
 
 TFX uses TensorFlow as their framework and inherited the flexibility of TensorFlow, which means users can switch different model without reworking the whole project. As we mentioned above, stream training enables model not only fit on the exist dataset, but also could fit the new data. As a commercial product, TFX also provides uniform interface and error handling, resource management procedures. To my surprised, TFX also offers the model validation to ensure the model is fine-tuned and well-trained. 
 
-Comparing with [[ADLS]], which published at the same year, we can easily find that TFX considers more aspects than [[ADLS]], a paper we think more focus on the business value. For example, TFX even considers what if the model is over-fitting and how can we prevent a 'bad' model from deploying to production. On the other hand, there are also some similarity between them. Both of them provide interfaces for users in order to make the whole system transparent and focus on their tasks. Moreover, transfer learning is the inspiration for the concept of warm-starting, [[Giraph++]] is also inspired by vertex-centered model. Both of the pairs are the optimization and development of the prototype. 
-
-Moreover, TFX benefits from the static graph feature of TensorFlow [1], the training and inferring speed is quicker than PyTorch.
-
-
-
-
-
-In the summary, focus on the main motivations and system design aspects of TFX.
+Comparing with [[ADLS]], which published at the same year, we can easily find that TFX considers more aspects than [[ADLS]], a paper we think more focus on the business value. For example, TFX even considers what if the model is over-fitting and how can we prevent a 'bad' model from deploying to production. On the other hand, there are also some similarity between them. Both of them provide interfaces for users in order to make the whole system transparent and focus on their tasks. Moreover, transfer learning is the inspiration for the concept of warm-starting, [[Giraph++]] is also inspired by vertex-centered model. Both of the pairs are the optimization and development of the prototype. Specifically, for the task like training machine learning models, if we deploy model-parallel or data-parallel approaches in Spark, it may not work as well as we expect. The reason is that the model parameters need to be updated frequently, which leads to additional overhead. But the RDD may perform better in model inference if the model is larger rather than deeper. MapReduce, on the other hand, is difficult to provide more valuable analysis on this topic because of the slow parameter updates. Additionally, it is worth mentioning that graphical convolutional neural networks (and spectral convolutional neural networks) may perform better with Giraph++, because the diffusion-based graphical convolutional neural network can be well optimized on Gieaph++. Moreover, TFX benefits from the static graph feature of TensorFlow [1], the training and inferring speed is quicker. However, the above systems we discussed cannot provides a 
 
 
 1. [TensorFlow: A System for Large-Scale Machine Learning](https://www.usenix.org/conference/osdi16/technical-sessions/presentation/abadi)
+2. [GRAPH CONVOLUTIONAL NETWORKS](https://tkipf.github.io/graph-convolutional-networks/)
