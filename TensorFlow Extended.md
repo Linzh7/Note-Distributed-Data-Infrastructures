@@ -1,4 +1,6 @@
-The engineering side of machine learning used to write custom codes to achieve goal, which leads to a lower code quality and redundant work. In some case, those codes even lead to some potential vulnerabilities or hazards. Therefore, the people working in Google developed a platform which integrates components of machine learning system to reduce the repetitive work and improve the quality of code.
+The engineering side of machine learning used to write custom codes to achieve goal, which leads to a lower code quality and redundant work and some potential vulnerabilities or hazards as results. Therefore, the people working in Google developed a platform which integrates components of machine learning system. However, the questions should be solved is not limited to code quality, the environment difference between training and production also could cause many kinds of failures. Besides, the commercial products also require lots of features, like stream training. Another important factor is the volume of models. Nowadays, the convolutional neural networks are tended to be too big to training on single computer, 
+
+
 
 
 
