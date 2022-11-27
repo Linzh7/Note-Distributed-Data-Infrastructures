@@ -1,10 +1,10 @@
 [Ray: A Distributed Framework for Emerging AI Applications](https://www.usenix.org/system/files/osdi18-moritz.pdf)
 
 Nowadays, more and more tasks required an intelligent system which could react to the dynamic environments, reinforcement learning (RL) system. However, due to the features of RL and the 
-varies in outcomes with different data, the framework must allow fine-grained calculations, and support heterogeneity in time and resource utilization. More In order to manage millions of diverse jobs per second with millisecond latencies, dynamic computation is another important 
-feature for the framework.
+varies in outcomes with different data, the framework must allow fine-grained calculations, and support heterogeneity in time and resource utilization. Additionally, in order to manage millions of diverse jobs per second with millisecond latencies, dynamic computation is another important 
+feature for the framework. Moreover, the solutions developed in recent years are either missing some features or are one-off systems that need to be developed separately for each application. In order to address this problem, the authors proposed an all-in-one system which could handles a wide range of data and the tasks in one system. 
 
-
+Like the previous systems, Ray also provide a unified interface for the tasks. To solve the biggest challenge, dealing of dynamic workload and stateful computations, Ray proposed tasks and actors.
 
 focus on the main motivations and system design aspects of Ray
 
