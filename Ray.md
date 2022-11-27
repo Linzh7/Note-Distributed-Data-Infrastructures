@@ -9,7 +9,7 @@ feature for the framework.
 focus on the main motivations and system design aspects of Ray
 
 
-If we compare the exist framework with Ray, we can find that those frameworks 
+If we compare the exist framework with Ray, we can find that the feature of those frameworks cannot satisfy the requirements of RL. [[MapReduce]], [[Spark]] and [[Dryad]] only support coarse-grained operation, while RL need fine-grained data to simulate different environment. TensorFlow and its platform, [[TensorFlow Extended]] does support distributed systems, however, it does not support simulation and serving, which play important roles in RL system.
 
 
 
