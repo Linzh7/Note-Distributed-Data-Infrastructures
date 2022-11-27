@@ -1,6 +1,6 @@
 [Ray: A Distributed Framework for Emerging AI Applications](https://www.usenix.org/system/files/osdi18-moritz.pdf)
 
-
+Nowadays, more and more tasks required an intelligent system which could react to the dynamic environments, reinforcement learning (RL) system. 
 
 
 
