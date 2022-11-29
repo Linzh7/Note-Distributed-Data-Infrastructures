@@ -6,6 +6,8 @@ feature for the framework. Moreover, the solutions developed in recent years are
 
 Like the previous systems, Ray also provide a unified interface for the tasks. To solve the biggest challenge, dealing of dynamic workload and stateful computations, Ray proposed tasks and actors, which also could be expressed in the interface. Another important change is Ray splits the task scheduler and metadata store which contains lineage information and objects in order to provide an instant processing system with lineage-based fault tolerance.
 
+
+
 focus on the main motivations and system design aspects of Ray
 
 
