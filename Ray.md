@@ -6,6 +6,8 @@ feature for the framework. Moreover, the solutions developed in recent years are
 
 Like the previous systems, Ray also provide a unified interface for the tasks. To solve the biggest challenge, dealing to dynamic workload and stateful computations, Ray proposed interface which can handle task-parallel and actor-based assignments to deal with the stateful and stateless computations. Another important change is Ray splits the task scheduler and metadata store which contains lineage information and objects in order to provide an instant processing system with lineage-based fault tolerance. Moreover, those systems which only stacking components together cannot address the latency issue. As a result, Ray integrates many existing simulators and deep learning frameworks while guaranteeing very low latency.
 
+
+
 If we compare the exist framework with Ray, we can find that the feature of those frameworks cannot satisfy the requirements of RL. [[MapReduce]], [[Spark]] and [[Dryad]] only support coarse-grained operation, while RL need fine-grained data to simulate different environment. TensorFlow and its platform, [[TensorFlow Extended]] does support distributed systems, however, it does not support simulation and serving, which play important roles in RL system.
 
 
