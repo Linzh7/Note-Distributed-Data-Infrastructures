@@ -5,8 +5,10 @@ From this point, Dataflow proposed a unified model which provides flexible model
 
 Windowing can split the unbounded data into finite chunks in order to do some specific operation. Moreover, Dataflow also offers correct and repeatable results by using watermark to establish a model to measure the skew between event time and processing time. Additionally, the system also need supports for the data windows and signals to inform the end of windows. However, due to the instability of data arrival, global metric cannot satisfy the requirements. They proposed triggers as a result, to provides finer control over windows.
 
-There are also some principles the authors mentioned also impacted on the desion of Dataflow. 
+There are also some principles the authors mentioned also impacted on the design of Dataflow. 
 
-[[MapReduce]] is a good start of the field of scale computing, and the shortcomings, like latency, are also discussed a lot.
+[[MapReduce]] is a good start of the field of scale computing, and its successors also have their contribution to build the unified platform, Hadoop. However, the shortcomings, like latency, are also still problems discussed a lot. 
+
+Moreover, MapReduce and others also did not propose a pipeline system to simplify the data process procedure.
 
 [[Spark]] Stream and Storm also enable the processing with low latency and good scalability. However, they cannot offer the exactly-once semantics or limited windowing semantics. 
