@@ -7,8 +7,4 @@ Windowing can split the unbounded data into finite chunks in order to do some sp
 
 There are also some principles the authors mentioned also impacted on the design of Dataflow. 
 
-[[MapReduce]] is a good start of the field of scale computing, and its successors also have their contribution to build the unified platform, Hadoop. However, the shortcomings, like latency, are also still problems discussed a lot. 
-
-Moreover, MapReduce and others also did not propose a pipeline system to simplify the data process procedure.
-
-[[Spark]] Stream and Storm also enable the processing with low latency and good scalability. However, they cannot offer the exactly-once semantics or limited windowing semantics. 
+[[MapReduce]] is a good start of the field of scale computing, and its successors also have their contribution to build the unified platform, Hadoop. However, the shortcomings, like latency, are also still problems discussed a lot.  Moreover, [[MapReduce]] and others also did not propose a pipeline system to simplify the data process procedure. [[Spark]] Stream and Storm also enable the processing with low latency and good scalability. However, they cannot offer the exactly-once semantics or limited windowing semantics. As for some specific tasks, like graph process, Dataflow may still not work as good as the customized system for graph. Comparing with [[Tensorflow Extended]] and [[Ray]], we can find that both of them want to offer a platform for deep learning solution. Dataflow, however, want to change the method to process data instead of just provide a platform. In this way, maybe we can say that the aim of Dataflow is more likely to replace the classic data process system, e.g. Hadoop and Spark Stream, with a system can handle the infinite input data which is common situation in recent years. In other word, Dataflow finds the new feature of data processing in the business world,
