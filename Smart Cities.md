@@ -6,13 +6,6 @@ The architecture of the smart city system can be divided into two parts: SmartSa
 
 Furthermore, the architecture of CiDAP is also worth to discuss. Generally, CiDAP have a hierarchical structure, specifically, there are three layers in CiDAP. The first layer, data sources layer, is made up by millions of sensors and cameras, moreover, there are IoT-agent which could represent these sensors and response to the higher layer. Then, the second layer is the processing and storage layer, we will explain its details below. The top layer is the application layer, which are deployed applications to build interfaces for public or enable analyzers and scientists to explore the data.
 
-Because the data sources upload semi-structured data and unstructured data, the processing layer must be able to handle both of them. 
+Because the data sources upload semi-structured data and unstructured data, the processing layer must be able to handle both of them. The unstructured data, like videos and audios, are stored at NoSQL. The semi-structured, JSON data, is also stored as JSON file in NoSQL database, CouchDB. The reason why they use CouchDB as their storage system is that CouchDB is able to work more closely with other components. For instance, CouchDB can generate and update map-reduce based view, provides API to enable other components to read and write data directly. The processing of data, however, can be categorized as internal and external. The internal process happens in CouchDB, which can reduce the overhead of transmisstion. However, if the computing task is more complex, then external computing will be activated on Spark cluster. Moreover, the data transmission between application layer and processing layer is implemented by REST API, which provides lots of useful features. For example, the push notifiction mechanism also allows that applications do not need to send multiple query. 
 
-The semi-structured, JSON data, is stored as JSON file in NoSQL database, CouchDB. The reason why they use CouchDB as their storage system is that CouchDB is able to work more closely with other components. For instance, CouchDB can generate and update map-reduce based view, provides API to enable other components to read and write data directly. 
-
-The processing of data, however, can be categorized as internal and external. The internal process happens in CouchDB, which can reduce the overhead of transmisstion. However, if the computing task is more complex
-
-
-
-
-Also, write about the various components, how they are integrated and contrast the lessons learned to what we have seen in the course.
+Comparing with the big data system in Uber, the data volume in CiDAP is much smaller. This might 
